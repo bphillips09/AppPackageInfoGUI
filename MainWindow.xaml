@@ -1,0 +1,22 @@
+﻿<Window x:Class="AppPackageInfoGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppPackageInfoGUI"
+        mc:Ignorable="d"
+        Title="AppPackageInfo" Height="450" Width="800">
+    <Grid Background="Transparent" Name="FilePanel" Drop="FilePanel_Drop" AllowDrop="true">
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Button Content="Select File" Click="FileOpen_Click" FontSize="20" Height="30"/>
+            <TextBlock Text="or Drag-and-Drop Here" HorizontalAlignment="Center" FontSize="20"/>
+        </StackPanel>
+        <TextBox Name="FileResults" Text="Waiting for File..." HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                 Background="Transparent" BorderThickness="0" IsReadOnly="True" FontSize="15" TextWrapping="Wrap" TextAlignment="Center"/>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+            <Button Name="SIDCopy" Content="Copy Package SID" Click="SIDCopy_Click" FontSize="20" Height="30" Visibility="Collapsed"/>
+            <TextBlock Text="Supported Filetypes" HorizontalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+            <TextBlock Text=".appx, .appxmanifest, .appxbundle, .msix, .msixbundle, .xml" HorizontalAlignment="Center" FontSize="15"/>
+        </StackPanel>
+    </Grid>
+</Window>
